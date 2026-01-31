@@ -1,12 +1,19 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import NavBar from "./components/NavBar.jsx";
+import WelcomePage from "./components/WelcomePage.jsx";
+import Footer from "./components/Footer.jsx";
 function App() {
   return (
-    <>
-      <h2 className="bg-red-400 font-mono text-4xl text-gray-200 m-4 text-center">
-        Hello World
-      </h2>
-    </>
+    <BrowserRouter>
+      <NavBar />
+
+      <Routes>
+        <Route path="/" element={<WelcomePage />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
